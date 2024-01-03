@@ -13,7 +13,7 @@ spec:
         app: static-website
     spec:
       containers:
-      - name: static-website
+      - name: static-website-container
         image: ckr123/static-website-k8s:latest
         ports:
         - containerPort: 80
