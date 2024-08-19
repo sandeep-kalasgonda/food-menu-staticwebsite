@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: static-website-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: static-website
@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
       - name: static-website-container
-        image: ckr123/static-website-k8s:v1
+        image: sandeep3414/static-web:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000  # Port on the container
+
